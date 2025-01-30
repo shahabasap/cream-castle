@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ArrowRight } from 'lucide-react';
 import Footer from "../components/Footer";
 import { motion } from 'framer-motion';
