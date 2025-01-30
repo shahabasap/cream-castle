@@ -2,6 +2,7 @@
 import { ArrowRight } from 'lucide-react';
 import Footer from "../components/Footer";
 import { motion } from 'framer-motion';
+import banner from '../assets/aboutus-banner.png'
 
 
 
@@ -12,7 +13,7 @@ const HomePage = () => {
       <section className="relative bg-gray-900 h-screen">
         <div className="absolute inset-0">
           <img
-            src="public/static/aboutus-banner.png"
+            src={banner}
             alt="Bakery Banner"
             className="w-full h-full "
           />

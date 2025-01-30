@@ -1,4 +1,4 @@
-
+import banner from '../assets/aboutus-banner.png'
 
 const AboutUs = () => {
  
@@ -8,7 +8,7 @@ const AboutUs = () => {
       <div className="relative h-[300px] bg-amber-800">
         <div className="absolute inset-0">
           <img
-            src="public/static/aboutus-banner.png"
+            src={banner}
             alt="Bakery Distribution"
             className="w-full h-full object-cover opacity-40"
           />
