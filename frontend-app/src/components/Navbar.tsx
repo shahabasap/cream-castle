@@ -30,7 +30,7 @@ const Navbar = () => {
                 <FaFacebook size={24} />
               </a>
             </div>
-            <div className="flex flex-col">
+            <div className="hidden md:flex flex-col">
               <a href="tel:+1234567890" className="text-sm text-gray-600 hover:text-gray-800 hover:underline transition-colors">
                 (123) 456-7890
               </a>

@@ -1,16 +1,25 @@
 import banner from '../assets/aboutus-banner.png'
+import bannerSmall from '../assets/banner-small.png'
+
 
 const AboutUs = () => {
  
   return (
     <div className="bg-[#FDF5E6] min-h-screen">
-      {/* Hero Section */}
-      <div className="relative h-[300px] bg-amber-800">
+       {/* Hero Section */}
+       <div className="relative h-[300px] bg-amber-800">
         <div className="absolute inset-0">
+          {/* Large banner for larger screens */}
           <img
             src={banner}
             alt="Bakery Distribution"
-            className="w-full h-full object-cover opacity-40"
+            className="hidden md:block w-full h-full object-cover opacity-40"
+          />
+          {/* Small banner for smaller screens */}
+          <img
+            src={bannerSmall}
+            alt="Bakery Distribution"
+            className="md:hidden w-full h-full object-cover opacity-40"
           />
         </div>
         <div className="relative h-full flex flex-col items-center justify-center text-white px-4">

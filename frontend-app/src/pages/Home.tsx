@@ -3,64 +3,73 @@ import { ArrowRight } from 'lucide-react';
 import Footer from "../components/Footer";
 import { motion } from 'framer-motion';
 import banner from '../assets/aboutus-banner.png'
+import bannerSmall from '../assets/banner-small.png'
 
 
 
 const HomePage = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative bg-gray-900 h-screen">
-        <div className="absolute inset-0">
-          <img
+      <section className="relative h-[70vh] bg-gray-900  sm:h-[80vh] md:h-[70vh]">
+  <div className="absolute inset-0">
+  <img
             src={banner}
-            alt="Bakery Banner"
-            className="w-full h-full "
+            alt="Bakery Distribution"
+            className="hidden md:block w-full h-full object-cover opacity-75"
           />
-        </div>
-        <div className="relative h-full flex items-center justify-center px-4">
-          <div className="text-center max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-  <motion.div
-    initial={{ y: -100 }}
-    animate={{ y: 0 }}
-    transition={{ duration: 0.5, delay:1 }}
-    className="inline-block"
-  >
-    Welcome
-  </motion.div>
-  <motion.div
-    initial={{ y: -100 }}
-    animate={{ y: 0 }}
-    transition={{ duration: 0.5, delay: 1}}
-    className="inline-block"
-  >
-    to Cream Castle
-  </motion.div>
-</h1>
+          {/* Small banner for smaller screens */}
+          <img
+            src={bannerSmall}
+            alt="Bakery Distribution"
+            className="md:hidden w-full h-full object-cover opacity-40"
+          />
+  </div>
+  <div className="relative h-full flex items-center justify-center px-4">
+    <div className="text-center max-w-3xl">
+      <div className="text-4xl md:text-6xl font-extrabold uppercase text-white mb-6">
+        <motion.div
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          className="inline-block"
+        >
+          Welcome
+        </motion.div>
+        <div>to</div>
+        <motion.div
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          className="inline-block"
+        >
+          Cream Castle
+        </motion.div>
+      </div>
 
-            <p className="text-xl text-gray-200 mb-8">
-              Crafting delicious baked goods since 2012
-            </p>
-            <motion.button
-             initial={{y:-5}}
-             animate={{
-                y:[5,-5],
-                transition:{
-                    duration:1,
-                    ease:"linear",
-                    repeat:Infinity,
-                    repeatType:"reverse",
-                }
-             }}
-            
-               className="inline-flex items-center px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors">
-              Order Now
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </motion.button>
-          </div>
-        </div>
-      </section>
+      <p className="text-xl text-gray-200 mb-8">
+        Crafting delicious baked goods since 2012
+      </p>
+      <motion.button
+        initial={{ y: -5 }}
+        animate={{
+          y: [5, -5],
+          transition: {
+            duration: 1,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "reverse",
+          },
+        }}
+        className="inline-flex items-center px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
+      >
+        Order Now
+        <ArrowRight className="ml-2 h-5 w-5" />
+      </motion.button>
+    </div>
+  </div>
+</section>
+
 
       {/* About Section */}
       <section className="py-24 bg-amber-50">
