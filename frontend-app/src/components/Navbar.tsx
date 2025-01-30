@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Outlet } from 'react-router-dom'
 import { CiInstagram } from "react-icons/ci";
 import { FaFacebook } from "react-icons/fa";
