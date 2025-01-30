@@ -12,7 +12,7 @@ const HomePage = () => {
       <section className="relative bg-gray-900 h-screen">
         <div className="absolute inset-0">
           <img
-            src="public/aboutus-banner.png"
+            src="public/static/aboutus-banner.png"
             alt="Bakery Banner"
             className="w-full h-full "
           />
