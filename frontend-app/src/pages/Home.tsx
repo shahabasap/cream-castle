@@ -11,36 +11,57 @@ const HomePage = () => {
   return (
     <div className="bg-white overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative h-[70vh] bg-gray-900  sm:h-[80vh] md:h-[70vh]">
+      <section className="relative h-[70vh] bg-gray-900 sm:h-[80vh] md:h-[70vh]">
   <div className="absolute inset-0">
-  <img
-            src={banner}
-            alt="Bakery Distribution"
-            className="hidden md:block w-full h-full object-cover opacity-75"
-          />
-          {/* Small banner for smaller screens */}
-          <img
-            src={bannerSmall}
-            alt="Bakery Distribution"
-            className="md:hidden w-full h-full object-cover opacity-40"
-          />
+    <img
+      src={banner}
+      alt="Bakery Distribution"
+      className="hidden md:block w-full h-full object-cover opacity-75"
+    />
+    {/* Small banner for smaller screens */}
+    <img
+      src={bannerSmall}
+      alt="Bakery Distribution"
+      className="md:hidden w-full h-full object-cover opacity-40"
+    />
   </div>
   <div className="relative h-full flex items-center justify-center px-4">
     <div className="text-center max-w-3xl">
       <div className="text-4xl md:text-6xl font-extrabold uppercase text-white mb-6">
         <motion.div
-          initial={{ y: -100 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 0.5, delay: 1 }}
+          initial={{ x: -100,opacity:0 }}
+          animate={{ x: 0 ,opacity:1}}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+            delay: 0.5,
+          }}
           className="inline-block"
         >
           Welcome
         </motion.div>
-        <div>to</div>
         <motion.div
-          initial={{ y: -100 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 0.5, delay: 1 }}
+          initial={{ opacity:0 }}
+          animate={{ opacity:1 }}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+            delay: 0.6,
+          }}
+        >
+          to
+        </motion.div>
+        <motion.div
+          initial={{ x: 100,opacity:0 }}
+          animate={{ x: 0,opacity:1 }}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+            delay: 0.7,
+          }}
           className="inline-block"
         >
           Cream Castle
@@ -69,6 +90,7 @@ const HomePage = () => {
     </div>
   </div>
 </section>
+
 
 
       {/* About Section */}
