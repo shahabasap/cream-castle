@@ -1,9 +1,10 @@
 
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import { CiInstagram } from "react-icons/ci";
 import { FaFacebook } from "react-icons/fa";
 
 const Navbar = () => {
+    const navigate=useNavigate()
   return (
     <>
       <nav className="bg-white border-b border-gray-200">
@@ -46,13 +47,13 @@ const Navbar = () => {
           <div className="flex items-center">
             <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
               <li>
-                <a href="/" className="hover:text-amber-200 transition-colors" aria-current="page">Home</a>
+                <a onClick={()=>navigate('/')} className="hover:text-amber-200 transition-colors" aria-current="page">Home</a>
               </li>
               <li>
-                <a href="/about" className="hover:text-amber-200 transition-colors">About Us</a>
+                <a onClick={()=>navigate('/about')} className="hover:text-amber-200 transition-colors">About Us</a>
               </li>
               <li>
-                <a href="/products" className="hover:text-amber-200 transition-colors">Products</a>
+                <a onClick={()=>navigate('/product')} className="hover:text-amber-200 transition-colors">Products</a>
               </li>
             </ul>
           </div>
