@@ -8,7 +8,7 @@ const AboutUs = () => {
       <div className="relative h-[300px] bg-amber-800">
         <div className="absolute inset-0">
           <img
-            src="src/assets/aboutus-banner.png"
+            src="public/aboutus-banner.png"
             alt="Bakery Distribution"
             className="w-full h-full object-cover opacity-40"
           />
