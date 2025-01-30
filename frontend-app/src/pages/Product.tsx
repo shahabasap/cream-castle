@@ -74,7 +74,7 @@ const Product = () => {
   return (
     <section className="max-w-7xl mx-auto px-11 py-16">
       <h2 className="text-3xl font-bold text-[#8B4513] text-center mb-12">Discover Our Products</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {products.map((product) => (
           <ProductCard key={product.id} {...product} />
         ))}
